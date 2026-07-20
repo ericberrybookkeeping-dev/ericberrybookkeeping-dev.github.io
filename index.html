@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berry Bookkeeping | Edmonton Small Business Bookkeeper</title>
+  <meta name="description" content="Outsourced bookkeeping for small business owners who want accurate financials, confident decisions, and room to grow. Based in Edmonton, AB." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #1a1f2e;
+      --slate:     #3d4a5c;
+      --mist:      #8a97a8;
+      --sage:      #4a7c6f;
+      --sage-light:#e8f0ee;
+      --gold:      #c9963a;
+      --cream:     #faf9f6;
+      --white:     #ffffff;
+      --border:    #e2e6e9;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-logo span { color: var(--sage); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--slate);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--sage); }
+
+    .nav-cta {
+      background: var(--sage);
+      color: var(--white) !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: #3d6b5f !important; color: var(--white) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    .hero-text {}
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-headline {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--sage);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--slate);
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--sage);
+      color: var(--white);
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: #3d6b5f; transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink);
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      border: 1.5px solid var(--border);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: border-color 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover { border-color: var(--slate); transform: translateY(-1px); }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .hero-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: var(--sage-light);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--sage);
+      font-size: 0.88rem;
+      font-weight: 500;
+      gap: 0.75rem;
+      border: 2px dashed #b5d0c9;
+    }
+
+    .hero-photo-placeholder svg {
+      width: 56px; height: 56px;
+      opacity: 0.45;
+    }
+
+    .hero-photo-badge {
+      position: absolute;
+      bottom: -1rem;
+      left: -1rem;
+      background: var(--gold);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.15;
+      box-shadow: 0 4px 20px rgba(201,150,58,0.3);
+    }
+
+    .hero-photo-badge small {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-top: 0.15rem;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--ink);
+      padding: 1.25rem 2rem;
+      text-align: center;
+      color: var(--mist);
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+    }
+
+    .trust-bar strong { color: var(--white); margin: 0 0.4rem; }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 6rem 2rem; }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      color: var(--slate);
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--white); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 8px 32px rgba(26,31,46,0.08);
+      transform: translateY(-2px);
+    }
+
+    .service-icon {
+      width: 44px; height: 44px;
+      background: var(--sage-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+    }
+
+    .service-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--slate);
+      margin-bottom: 1.25rem;
+      line-height: 1.65;
+    }
+
+    .service-list {
+      list-style: none;
+    }
+
+    .service-list li {
+      font-size: 0.87rem;
+      color: var(--slate);
+      padding: 0.35rem 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .service-list li::before {
+      content: '✓';
+      color: var(--sage);
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    /* ── PRICING ── */
+    #pricing { background: var(--cream); }
+
+    .pricing-intro {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .pricing-intro-left {}
+
+    .guarantee-badge {
+      background: var(--sage-light);
+      border: 1px solid #b5d0c9;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      font-size: 0.88rem;
+      color: var(--sage);
+      font-weight: 500;
+      max-width: 280px;
+      line-height: 1.55;
+      flex-shrink: 0;
+    }
+
+    .guarantee-badge strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+      color: var(--ink);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--sage);
+      box-shadow: 0 8px 40px rgba(74,124,111,0.12);
+    }
+
+    .featured-pill {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--sage);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 99px;
+      white-space: nowrap;
+    }
+
+    .pricing-tier {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+
+    .pricing-card .tagline {
+      font-size: 0.87rem;
+      color: var(--slate);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .pricing-price {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .price-range {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .price-period {
+      font-size: 0.85rem;
+      color: var(--mist);
+      margin-top: 0.3rem;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 1.75rem;
+    }
+
+    .pricing-features li {
+      font-size: 0.88rem;
+      color: var(--slate);
+      padding: 0.4rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .pricing-features li::before {
+      content: '✓';
+      color: var(--sage);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .pricing-best {
+      font-size: 0.8rem;
+      color: var(--mist);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-outline {
+      display: block;
+      text-align: center;
+      padding: 0.8rem;
+      border-radius: 7px;
+      border: 1.5px solid var(--sage);
+      color: var(--sage);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover, .pricing-card.featured .btn-outline {
+      background: var(--sage);
+      color: var(--white);
+    }
+
+    .pricing-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--mist);
+      margin-top: 2rem;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+    }
+
+    .about-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: var(--sage-light);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--sage);
+      font-size: 0.88rem;
+      font-weight: 500;
+      gap: 0.75rem;
+      border: 2px dashed #b5d0c9;
+    }
+
+    .about-photo-placeholder svg {
+      width: 48px; height: 48px;
+      opacity: 0.5;
+    }
+
+    .about-accent {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--gold);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.1;
+      box-shadow: 0 4px 20px rgba(201,150,58,0.3);
+    }
+
+    .about-accent small {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      opacity: 0.85;
+      margin-top: 0.2rem;
+    }
+
+    .about-text h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-text p {
+      color: var(--slate);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      font-size: 0.97rem;
+    }
+
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--sage-light);
+      border: 1px solid #b5d0c9;
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--sage);
+      margin-top: 1rem;
+    }
+
+    /* ── WHAT I DON'T DO ── */
+    #scope { background: var(--cream); }
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .scope-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+
+    .scope-card h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .scope-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 99px;
+    }
+
+    .tag-yes { background: var(--sage-light); color: var(--sage); }
+    .tag-no { background: #fdecea; color: #c0392b; }
+
+    .scope-list {
+      list-style: none;
+    }
+
+    .scope-list li {
+      font-size: 0.88rem;
+      color: var(--slate);
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .scope-list li .icon { font-size: 0.9rem; flex-shrink: 0; }
+
+    /* ── CTA BAND ── */
+    #cta {
+      background: var(--ink);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    #cta .section-eyebrow { color: var(--gold); }
+
+    #cta h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    #cta p {
+      color: var(--mist);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    #cta .btn-primary {
+      background: var(--gold);
+      font-size: 1rem;
+      padding: 1rem 2rem;
+    }
+
+    #cta .btn-primary:hover { background: #b8852e; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      color: var(--slate);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--slate);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-detail a {
+      color: var(--sage);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--slate);
+      letter-spacing: 0.02em;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 7px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      color: var(--ink);
+      background: var(--cream);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--sage);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-submit {
+      background: var(--sage);
+      color: var(--white);
+      border: none;
+      padding: 0.9rem 1.75rem;
+      border-radius: 7px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      align-self: flex-start;
+    }
+
+    .form-submit:hover { background: #3d6b5f; transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: var(--mist);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    footer a { color: var(--mist); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      #hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; min-height: auto; }
+      .hero-visual { display: flex; justify-content: center; }
+      .hero-photo-wrap { max-width: 280px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-photo-wrap { display: none; }
+      .scope-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .pricing-intro { flex-direction: column; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px;
+      height: 44px;
+      background: var(--sage);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.2s;
+      box-shadow: 0 4px 12px rgba(74,124,111,0.35);
+      z-index: 999;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .scroll-top:hover { transform: translateY(-2px); background: #3d6b5f; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Berry <span>Bookkeeping</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://calendly.com/ericberrybookkeeping/30min" target="_blank" class="nav-cta">Book a Free Call</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" style="padding-top:5rem;padding-bottom:5rem;">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Edmonton Bookkeeping</span>
+      <h1 class="hero-headline">Clean books. Clear numbers. Confident decisions.</h1>
+      <p class="hero-sub">Messy books create stress and cost your growing business money. I keep your QuickBooks clean, your financials accurate, and your decisions informed by accurate financial reporting. Personalized service from a local Edmonton Bookkeeper.</p>
+      <div class="hero-actions">
+        <a href="https://calendly.com/ericberrybookkeeping/30min" target="_blank" class="btn-primary">Book a Free Call</a>
+        <a href="#contact" class="btn-secondary">Send me a quick note</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo-wrap">
+        <img src="headshot.jpg" alt="Eric Berry - Berry Bookkeeping" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:20px;display:block;" />
+        <div class="hero-photo-badge" style="background:none;box-shadow:none;padding:0;bottom:-1.5rem;left:-1.5rem;">
+          <img src="qbo-badge.png" alt="Certified QuickBooks Online ProAdvisor" style="width:100px;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <strong>Certified QuickBooks ProAdvisor</strong> · Edmonton Based Bookkeeper · No contracts · Cancel anytime
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <div class="section-eyebrow">What I Do</div>
+      <h2 class="section-title">Three services. One goal — books you can trust.</h2>
+      <p class="section-sub">Whether you're starting fresh, catching up, or ready to hand it off, I can help at every stage of your business.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">📒</div>
+          <h3>Monthly Bookkeeping</h3>
+          <p>Ongoing, reliable bookkeeping that keeps your finances accurate and your focus on running your business — not managing spreadsheets.</p>
+          <ul class="service-list">
+            <li>Bank &amp; credit card reconciliations monthly</li>
+            <li>Automated categorization with smart bank rules</li>
+            <li>Financial statements within 15 business days</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Cleanup &amp; Catchup</h3>
+          <p>Behind on your books or starting fresh in QuickBooks? I get everything organized, corrected, and ready — so you're working from accurate numbers from day one.</p>
+          <ul class="service-list">
+            <li>Rebuild months or years of records</li>
+            <li>Every transaction reviewed and corrected</li>
+            <li>Tax-ready handoff for your accountant</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎓</div>
+          <h3>Training &amp; Consulting</h3>
+          <p>New to QuickBooks or need a fresh start? I'll set everything up the right way and make sure you know exactly what's happening in your books.</p>
+          <ul class="service-list">
+            <li>Personalized QuickBooks setup and training</li>
+            <li>Chart of accounts and workflow optimization</li>
+            <li>Ongoing check-ins to keep your books on track</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="section-inner">
+      <div class="pricing-intro">
+        <div class="pricing-intro-left">
+          <div class="section-eyebrow">Pricing</div>
+          <h2 class="section-title">Transparent pricing.<br>Tailored for you.</h2>
+          <p class="section-sub" style="margin-bottom:0;">Most small businesses lose thousands each year to messy books and avoidable issues. Clean, reliable bookkeeping costs less than one bad decision.</p>
+        </div>
+        <div class="guarantee-badge">
+          <strong>💯 First Month Guarantee</strong>
+          100% satisfaction in month one or you don't pay. No contracts. Cancel anytime.
+        </div>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-tier">Monthly Bookkeeping</div>
+          <h3>Essential</h3>
+          <p class="tagline">Reliable monthly bookkeeping for straightforward businesses.</p>
+          <div class="pricing-price">
+            <div class="price-range">$425 – $550</div>
+            <div class="price-period">per month (CAD)</div>
+          </div>
+          <ul class="pricing-features">
+            <li>Monthly bank &amp; card reconciliation</li>
+            <li>Expense categorization with bank rules</li>
+            <li>Monthly financial statements</li>
+          </ul>
+          <p class="pricing-best">Best for: Simple service businesses with a single revenue stream</p>
+          <a href="#contact" class="btn-outline">Get Started</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="featured-pill">Most Popular</div>
+          <div class="pricing-tier">Monthly Bookkeeping</div>
+          <h3>Professional</h3>
+          <p class="tagline">For growing businesses that need more than the basics.</p>
+          <div class="pricing-price">
+            <div class="price-range">$550 – $700</div>
+            <div class="price-period">per month (CAD)</div>
+          </div>
+          <ul class="pricing-features">
+            <li>Everything in Essential</li>
+            <li>Balance sheet reporting</li>
+            <li>Light AR and AP tracking</li>
+            <li>Quarterly performance summary</li>
+            <li>Priority support</li>
+          </ul>
+          <p class="pricing-best">Best for: Growing businesses with multiple accounts or revenue streams</p>
+          <a href="#contact" class="btn-outline">Get Started</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-tier">Monthly Bookkeeping</div>
+          <h3>Premium</h3>
+          <p class="tagline">Advanced bookkeeping for businesses with greater complexity.</p>
+          <div class="pricing-price">
+            <div class="price-range">$700 – $1,050</div>
+            <div class="price-period">per month (CAD)</div>
+          </div>
+          <ul class="pricing-features">
+            <li>Everything in Professional</li>
+            <li>Custom financial reports</li>
+            <li>Multi-entity bookkeeping</li>
+            <li>CPA-ready books for tax time</li>
+          </ul>
+          <p class="pricing-best">Best for: Established or multi-entity businesses</p>
+          <a href="#contact" class="btn-outline">Get Started</a>
+        </div>
+      </div>
+      <p class="pricing-note">Cleanup &amp; catchup and training &amp; consulting services are priced separately. <a href="#contact" style="color:var(--sage);font-weight:500;">Get in touch for a quote.</a></p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-photo-wrap">
+          <div class="about-photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <rect x="2" y="5" width="20" height="14" rx="2"/>
+              <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none" opacity="0.5"/>
+            </svg>
+            Video or photo coming soon
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="section-eyebrow">About</div>
+          <h2>Hi, I'm Eric Berry.</h2>
+          <p>I started Berry Bookkeeping because I kept seeing the same thing — small business owners making important decisions with books that were months behind, inaccurate, or impossible to understand.</p>
+          <p>My goal is simple: give you clean numbers, clear answers, and the confidence to grow your business. I work with growing Edmonton businesses that have outgrown owner-managed books and need accurate, reliable financials without hiring in-house.</p>
+          <p>With a Bachelor of Commerce degree from MacEwan University and a background in finance and accounting across multiple industries, I bring more than bookkeeping to the table — I bring context.</p>
+          <div style="margin-top:1rem;">
+            <img src="qbo-badge.png" alt="Certified QuickBooks Online ProAdvisor" style="width:90px;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOPE -->
+  <section id="scope">
+    <div class="section-inner">
+      <div class="section-eyebrow">Scope of Work</div>
+      <h2 class="section-title">What I do — and what I don't.</h2>
+      <p class="section-sub">I specialize in bookkeeping so that when it's time to hand your books to your CPA, it saves you money, stress, and time.</p>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <h4>What I do <span class="scope-tag tag-yes">Included</span></h4>
+          <ul class="scope-list">
+            <li><span class="icon">✓</span> Monthly bank &amp; credit card reconciliations</li>
+            <li><span class="icon">✓</span> Expense categorization and bank rules</li>
+            <li><span class="icon">✓</span> Financial statement preparation</li>
+            <li><span class="icon">✓</span> QuickBooks setup and optimization</li>
+            <li><span class="icon">✓</span> Books cleanup and catchup</li>
+            <li><span class="icon">✓</span> QuickBooks training and consulting</li>
+            <li><span class="icon">✓</span> CPA-ready year-end packages</li>
+          </ul>
+        </div>
+        <div class="scope-card">
+          <h4>What I don't do <span class="scope-tag tag-no">Not Included</span></h4>
+          <ul class="scope-list">
+            <li><span class="icon">✗</span> Tax preparation or filing</li>
+            <li><span class="icon">✗</span> Bill payment or collections</li>
+            <li><span class="icon">✗</span> Receipt saving or document management</li>
+            <li><span class="icon">✗</span> Payroll processing</li>
+            <li><span class="icon">✗</span> General admin or virtual assistant work</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section id="cta" style="padding:5rem 2rem;">
+    <div class="section-eyebrow">Ready to get started?</div>
+    <h2>Every month you wait costs you clarity.</h2>
+    <p>One free call today could save you hours of stress this year — and give you a clear picture of where your business actually stands.</p>
+    <a href="https://calendly.com/ericberrybookkeeping/30min" target="_blank" class="btn-primary">Book a Free 15-Minute Call</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-eyebrow">Contact</div>
+          <h2>Let's talk about your books.</h2>
+          <p>Send me a note and I'll get back to you within one business day. No pressure, no sales pitch — just a conversation about whether we're a good fit.</p>
+          <div class="contact-detail">
+            <span>📍</span> Edmonton, Alberta — serving clients remotely across Canada
+          </div>
+          <div class="contact-detail">
+            <span>📧</span> <a href="mailto:ericberrybookkeeping@gmail.com">ericberrybookkeeping@gmail.com</a>
+          </div>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/xeeykerz" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Business Email</label>
+            <input type="email" name="email" placeholder="jane@yourbusiness.com" required />
+          </div>
+          <div class="form-group">
+            <label>What service are you interested in?</label>
+            <select name="service">
+              <option value="">Select a service…</option>
+              <option>Monthly Bookkeeping</option>
+              <option>Cleanup &amp; Catchup</option>
+              <option>Training &amp; Consulting</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell me a bit about your business</label>
+            <textarea name="message" placeholder="Industry, approximate revenue, current bookkeeping situation…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Berry Bookkeeping</div>
+      <div>Edmonton, AB · <a href="mailto:ericberrybookkeeping@gmail.com">ericberrybookkeeping@gmail.com</a></div>
+      <div>© 2026 Berry Bookkeeping. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+  <script>
+    const btn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 400);
+    });
+  </script>
+
+</body>
+</html>
